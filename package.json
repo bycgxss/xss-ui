@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/bycgxss/xss-ui/issues"
   },
-  "homepage": "https://github.com/bycgxss/xss-ui#readme"
+  "homepage": "https://github.com/bycgxss/xss-ui#readme",
+  "dependencies": {
+    "vue": "^2.6.11"
+  }
 }
