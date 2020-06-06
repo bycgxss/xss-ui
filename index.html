@@ -31,7 +31,9 @@
 <body>
 <div id="app">
   <div class="box">
-    <g-input value="燕" @change="inputChange"></g-input>
+    <g-input v-model="msg"></g-input>
+    <p>{{msg}}</p>
+    <button @click="msg+=1">+1</button>
   </div>
 
 
