@@ -6,7 +6,7 @@
 
 <script>
   export default {
-    name: 'GuluRow',
+    name: 'XssRow',
     props: {
       gutter: {
         type: [Number, String]
@@ -21,10 +21,7 @@
     computed: {
       rowStyle() {
         let {gutter} = this
-        return {
-          marginLeft: -gutter / 2 + 'px',
-          marginRight: -gutter / 2 + 'px'
-        }
+        return {marginLeft: -gutter / 2 + 'px', marginRight: -gutter / 2 + 'px'}
       },
       rowClass() {
         let {align} = this
@@ -38,8 +35,7 @@
     }
   }
 </script>
-
-<style lang="scss" scoped>
+<style scoped lang="scss">
   .row {
     display: flex;
     flex-wrap: wrap;
