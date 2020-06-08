@@ -40,9 +40,12 @@ new Vue({
 
   },
   methods: {
-    showToast() {
+    showToast1(){this.showToast('top')},
+    showToast2(){this.showToast('middle')},
+    showToast3(){this.showToast('bottom')},
+    showToast(position) {
       this.$toast(`你的智商目前为：${parseInt(Math.random() * 100)}。需要充值！`, {
-        position: 'bottom',
+        position,
         enableHtml: false,
         closeButton: {
           text: '充值',
@@ -50,7 +53,7 @@ new Vue({
             console.log('他说已经充值智商了')
           }
         },
-        autoClose: false,
+        autoClose: true,
         autoCloseDelay: 2
       })
     }
