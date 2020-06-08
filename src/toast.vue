@@ -16,12 +16,11 @@
     name: 'XssToast',
     props: {
       autoClose: {
-        type: Boolean,
-        default: true
-      },
-      autoCloseDelay: {
-        type: Number,
-        default: 50
+        type: [Boolean, Number],
+        default: 5,
+        validator(value) {
+          return value === false || typeof value === 'number'
+        }
       },
       closeButton: {
         type: Object,
@@ -62,16 +61,13 @@
         if (this.autoClose) {
           setTimeout(() => {
             this.close()
-          }, this.autoCloseDelay * 1000)
+          }, this.autoClose * 1000)
         }
       },
       close() {
         this.$el.remove()
         this.$emit('close')
         this.$destroy()
-      },
-      log() {
-        console.log('测试')
       },
       onClickClose() {
         this.close()
@@ -114,6 +110,7 @@
 
     &.position-top {
       top: 0;
+
       .toast {
         border-top-left-radius: 0;
         border-top-right-radius: 0;
@@ -123,6 +120,7 @@
 
     &.position-bottom {
       bottom: 0;
+
       .toast {
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 0;
@@ -133,6 +131,7 @@
     &.position-middle {
       top: 50%;
       transform: translateX(-50%) translateY(-50%);
+
       .toast {
         animation: fade-in $animation-duration;
       }
