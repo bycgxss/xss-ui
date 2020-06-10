@@ -50,7 +50,7 @@
     mounted() {
       if (this.trigger === 'click') {
         this.$refs.popover.addEventListener('click', this.onClick)
-      }else{
+      } else {
         this.$refs.popover.addEventListener('mouseenter', this.open)
         this.$refs.popover.addEventListener('mouseleave', this.close)
       }
@@ -58,7 +58,7 @@
     destroyed() {
       if (this.trigger === 'click') {
         this.$refs.popover.removeEventListener('click', this.onClick)
-      }else{
+      } else {
         this.$refs.popover.removeEventListener('mouseenter', this.open)
         this.$refs.popover.removeEventListener('mouseleave', this.close)
       }
@@ -150,11 +150,13 @@
       }
 
       &::before {
+        border-bottom: none;
         border-top-color: black;
         top: 100%;
       }
 
       &::after {
+        border-bottom: none;
         border-top-color: white;
         top: calc(100% - 1px);
       }
@@ -168,11 +170,13 @@
       }
 
       &::before {
+        border-top: none;
         border-bottom-color: black;
         bottom: 100%;
       }
 
       &::after {
+        border-top: none;
         border-bottom-color: white;
         bottom: calc(100% - 1px);
       }
@@ -188,11 +192,13 @@
       }
 
       &::before {
+        border-right: none;
         border-left-color: black;
         left: 100%;
       }
 
       &::after {
+        border-right: none;
         border-left-color: white;
         left: calc(100% - 1px);
       }
@@ -207,11 +213,13 @@
       }
 
       &::before {
+        border-left: none;
         border-right-color: black;
         right: 100%;
       }
 
       &::after {
+        border-left: none;
         border-right-color: white;
         right: calc(100% - 1px);
       }
