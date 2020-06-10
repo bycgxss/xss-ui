@@ -26,11 +26,32 @@
 <body>
 <div id="app">
   <div style="overflow: hidden; padding: 50px;">
-    <g-popover>
+    <g-popover position="top">
       <template slot="content">
-        <div>popover</div>
+        <div>top</div>
       </template>
-        <g-button>点我</g-button>
+      <g-button>上</g-button>
+    </g-popover>
+
+    <g-popover position="bottom">
+      <template slot="content">
+        <div>bottom</div>
+      </template>
+      <g-button>下</g-button>
+    </g-popover>
+
+    <g-popover position="left">
+      <template slot="content">
+        <div>left</div>
+      </template>
+      <g-button>左</g-button>
+    </g-popover>
+
+    <g-popover position="right">
+      <template slot="content">
+        <div>right</div>
+      </template>
+      <g-button>右</g-button>
     </g-popover>
   </div>
 
