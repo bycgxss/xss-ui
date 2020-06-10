@@ -1,7 +1,7 @@
 <template>
   <div class="popover" ref="popover">
     <div ref="contentWrapper" class="content-wrapper" v-if="visible" :class="{[`position-${position}`]: true}">
-      <slot name="content"></slot>
+      <slot name="content" :close="close"></slot>
     </div>
     <span ref="triggerWrapper" style="display: inline-block;">
       <slot></slot>
@@ -12,25 +12,6 @@
 <script>
   export default {
     name: 'XssPopover',
-    data() {
-      return {visible: false}
-    },
-    computed: {
-      openEvent() {
-        if (this.$trigger === 'click') {
-          return 'click'
-        } else {
-          return 'mouseenter'
-        }
-      },
-      closeEvent() {
-        if (this.$trigger === 'click') {
-          return 'click'
-        } else {
-          return 'mouseleave'
-        }
-      }
-    },
     props: {
       position: {
         type: String,
@@ -47,6 +28,9 @@
         }
       }
     },
+    data() {
+      return {visible: false}
+    },
     mounted() {
       if (this.trigger === 'click') {
         this.$refs.popover.addEventListener('click', this.onClick)
@@ -61,6 +45,22 @@
       } else {
         this.$refs.popover.removeEventListener('mouseenter', this.open)
         this.$refs.popover.removeEventListener('mouseleave', this.close)
+      }
+    },
+    computed: {
+      openEvent() {
+        if (this.$trigger === 'click') {
+          return 'click'
+        } else {
+          return 'mouseenter'
+        }
+      },
+      closeEvent() {
+        if (this.$trigger === 'click') {
+          return 'click'
+        } else {
+          return 'mouseleave'
+        }
       }
     },
     methods: {
