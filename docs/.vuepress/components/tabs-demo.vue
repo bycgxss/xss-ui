@@ -32,24 +32,24 @@
       return {
         tabs:'one',
         content:`
- <y-tabs :selected.sync="tabs">
-    <y-tabs-head>
-        <y-tabs-item name="one">
+ <x-tabs :selected.sync="tabs">
+    <x-tabs-head>
+        <x-tabs-item name="one">
         one
-        </y-tabs-item>
-        <y-tabs-item name="two" disabled >
+        </x-tabs-item>
+        <x-tabs-item name="two" disabled>
             two
-        </y-tabs-item>
-        <y-tabs-item name="three">
+        </x-tabs-item>
+        <x-tabs-item name="three">
             three
-        </y-tabs-item>
-    </y-tabs-head>
-    <y-tabs-body>
-        <y-tabs-pane name="one">内容 1</y-tabs-pane>
-        <y-tabs-pane name="two">内容 2</y-tabs-pane>
-        <y-tabs-pane name="three">内容 3</y-tabs-pane>
-    </y-tabs-body>
-</y-tabs>`.trim()
+        </x-tabs-item>
+    </x-tabs-head>
+    <x-tabs-body>
+        <x-tabs-pane name="one">内容 1</x-tabs-pane>
+        <x-tabs-pane name="two">内容 2</x-tabs-pane>
+        <x-tabs-pane name="three">内容 3</x-tabs-pane>
+    </x-tabs-body>
+</x-tabs>`.trim()
       }
     },
     components:{
@@ -58,6 +58,6 @@
       'x-tabs-body':tabsBody,
       'x-tabs-item':tabsItem,
       'x-tabs-pane':tabsPane
-    }
+    },
   }
 </script>
