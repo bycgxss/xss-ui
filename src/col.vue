@@ -56,9 +56,11 @@
         ]
       },
       colStyle() {
-        return {
-          paddingLeft: this.gutter / 2 + 'px',
-          paddingRight: this.gutter / 2 + 'px',
+        if (this.gutter) {
+          return {
+            marginLeft: this.gutter / 2 + 'px',
+            marginRight: this.gutter / 2 + 'px',
+          }
         }
       }
     }
@@ -92,7 +94,7 @@
         }
       }
     }
-    @media (min-width: 769px) { // 770
+    @media (min-width: 769px){ // 770
       $class-prefix: col-narrow-pc-;
       @for $n from 1 through 24 {
         &.#{$class-prefix}#{$n} {

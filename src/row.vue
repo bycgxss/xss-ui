@@ -14,7 +14,7 @@
       align: {
         type: String,
         validator(value) {
-          return ['left', 'right', 'center'].indexOf(value) >= 0
+          return ['left', 'right', 'center'].includes(value)
         }
       }
     },
@@ -29,16 +29,18 @@
       }
     },
     mounted() {
-      this.$children.forEach((vm) => {
-        vm.gutter = this.gutter
-      })
+      if (this.gutter) {
+        this.$children.forEach((vm) => {
+          vm.gutter = this.gutter
+        })
+      }
     }
   }
 </script>
 <style scoped lang="scss">
   .row {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
 
     &.align-left {
       justify-content: flex-start;
