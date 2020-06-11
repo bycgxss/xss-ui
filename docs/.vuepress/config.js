@@ -1,4 +1,5 @@
 module.exports = {
+  base: '/xss-ui/',
   title: 'XssUI 组件库',
   description: '一个好用的UI框架',
   themeConfig: {
