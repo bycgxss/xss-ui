@@ -1,6 +1,7 @@
 <template>
   <div>
     <x-button>按钮</x-button>
+    <x-button icon="settings" icon-position="right">按钮</x-button>
   </div>
 </template>
 
@@ -9,6 +10,6 @@
   export default {
     components: {
       'x-button': Button
-    }
+    },
   }
 </script>

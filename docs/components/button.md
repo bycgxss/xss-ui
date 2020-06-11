@@ -1,5 +1,5 @@
 # Button
 
-使用
-
-<button-demo></button-demo>
+<ClientOnly>
+  <button-demo></button-demo>
+</ClientOnly>
