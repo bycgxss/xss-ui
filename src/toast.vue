@@ -18,7 +18,7 @@
 <script>
   //构造组件的选项
   export default {
-    name: 'YToast',
+    name: 'XssToast',
     props: {
       autoClose: {
         type: [Boolean,Number],
