@@ -15,10 +15,10 @@
     data(){
       return{
         content:`
-<y-input value="这是输入框"></y-input>
-<y-input value="这是输入框" disabled></y-input>
-<y-input value="这是输入框" readonly></y-input>
-<y-input value="123" error="请重新输入手机号码"></y-input>
+<x-input value="这是输入框"></x-input>
+<x-input value="这是输入框" disabled></x-input>
+<x-input value="这是输入框" readonly></x-input>
+<x-input value="123" error="请重新输入手机号码"></x-input>
                 `.trim()
       }
     },

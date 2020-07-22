@@ -12,14 +12,13 @@ title: 介绍
 - 适应PC端和移动端
 - 使用了VuePress搭建UI框架官网
 - 目前共计8个UI组件：Button、Input、Grid、Layout、Collapse、Popover、Toast、Tabs。
-- 使用vue-test-utils写单元测试，由于时间有限后期会慢慢完成所有组件的单元测试代码
-- 使用了Travis CI 持续集成
+- 使用Chai&Mocha写单元测试，使用了Travis CI 持续集成
 
 # 使用的技术
 - Vue.js技术栈，包括但不限于：指令及自定义指令、计算属性、class动态绑定、条件渲染、列表渲染、事件监听处理、组件注册、props及校验、插槽、动画过渡、过滤器、多种组件通信方式等
 - 设计模式：单向数据流、测试驱动开发、发布订阅模式、API正交（props）、可测试代码（在标签加入特殊的属性，方便测试的时候可以找到）
 - 单元测试、覆盖率、持续集成
-- 测试库：Chai、Karma、Sinon、Vue-test-utils、Travis CI
+- 测试库：Chai、Mocha、Karma、Sinon、Travis CI
 
 # 联系方式
 - 微信：bycg1997
